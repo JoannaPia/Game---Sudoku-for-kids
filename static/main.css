@@ -1,0 +1,124 @@
+:root {
+    --border-radius: 2px;
+    --grid-cols: 1;
+    --grid-rows: 1;
+}
+
+html, body {
+    background-image: url("../static/images/background.jpg");
+    background-color: #cdcdcd;
+    height: 1200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+section.game-board {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    z-index: 1;
+
+}
+
+#board {
+    width: min-content;
+    height: min-content;
+    display: grid;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    box-shadow: 0 0 0 1px #122138;
+    gap:3px;
+    background-color: #41c9f5;
+    z-index: 3;
+
+}
+
+
+.slot{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    box-shadow: 0 0 0 1px #122138;
+    align-self: center;
+    justify-self: center;
+    z-index: 2;
+    border-radius: var(--border-radius);}
+
+
+
+.all-cards {width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
+
+.card {
+    margin: 14px;
+    width: 55px;
+    height: 55px;
+    padding: 2px;
+    box-shadow: 0 0 0 2px #f5f408;
+    border-radius: var(--border-radius);
+    background-color: #41c9f5;
+}
+
+.card > img {
+    width: 55px;
+    height: 55px;
+    box-shadow: 0 0 0 2px #f5f408;
+    border-radius: var(--border-radius);
+}
+
+
+.fullSlot {
+    width: 55px;
+    height: 55px;
+    box-shadow: 0 0 0 2px #122138;
+    border-radius: var(--border-radius);
+    z-index: 1;
+}
+
+
+.drop-zone.active-zone:empty, .mixed-cards.active-zone {
+    border: 4px dashed #0550fc;
+    border-radius: var(--border-radius);
+    background: #b8d1fb;
+}
+
+.drop-zone.over-zone:empty, .mixed-cards.over-zone {
+    border-style: solid;
+}
+
+/*.panel {
+    width: 30%;
+    padding: 5px;
+    text-align: center;
+    margin: auto;
+}*/
+
+
+
+.final {
+    display: flex;
+    width: 40%;
+    height: auto;
+
+}
+.finalText {
+    display: flex;
+    font-size: x-large;
+    height: auto;
+    color: #D70000;
+}
+
+
+
